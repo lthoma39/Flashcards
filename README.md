@@ -5,7 +5,6 @@ Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note c
 
 ### App Walk-though
 
-<img src=http://g.recordit.co/vVsxNg8LX6.gif width=200><br>
 <img src=http://g.recordit.co/yxi9Fz65Se.gif width=200><br>
 
 ## Required
