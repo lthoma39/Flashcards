@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     @IBAction func didTapOnFlashcard(_ sender: Any) {
         FrontLabel.isHidden = true;
         view.backgroundColor = UIColor.green
-        //hello
+        
     }
 }
 
