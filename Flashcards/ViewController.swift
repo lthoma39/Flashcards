@@ -13,8 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var FrontLabel: UILabel!
     @IBOutlet weak var BackLabel: UILabel!
     
+    var backgroundColor: UIColor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundColor = view.backgroundColor
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -25,9 +28,14 @@ class ViewController: UIViewController {
 
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        FrontLabel.isHidden = true;
-        view.backgroundColor = UIColor.green
-        
+        if (FrontLabel.isHidden){
+            FrontLabel.isHidden = false;
+            view.backgroundColor = backgroundColor;
+        }
+        else{
+            FrontLabel.isHidden = true;
+            view.backgroundColor = UIColor.green;
+        }
     }
 }
 
