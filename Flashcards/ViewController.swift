@@ -28,6 +28,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
+        //conditional that toggles based on if the question is shown or not
         if (FrontLabel.isHidden){
             FrontLabel.isHidden = false;
             view.backgroundColor = backgroundColor;
