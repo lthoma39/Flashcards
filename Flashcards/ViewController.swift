@@ -15,6 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var BackLabel: UILabel!
     @IBOutlet weak var card: UIView!
     
+    @IBOutlet weak var btnOptionOne: UIButton!
+    @IBOutlet weak var btnOptionTwo: UIButton!
+    @IBOutlet weak var btnOptionThree: UIButton!
+    @IBOutlet weak var btnOptionFour: UIButton!
+    
+    
+    @IBOutlet weak var retButton: UIButton!
     
     var backgroundColor: UIColor!
     
@@ -30,6 +37,28 @@ class ViewController: UIViewController {
         FrontLabel.clipsToBounds = true
         BackLabel.clipsToBounds = true
         
+        btnOptionOne.layer.borderWidth = 3.0
+        btnOptionOne.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        btnOptionOne.layer.cornerRadius = 20.0
+        
+        btnOptionTwo.layer.borderWidth = 3.0
+        btnOptionTwo.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        btnOptionTwo.layer.cornerRadius = 20.0
+        
+        btnOptionThree.layer.borderWidth = 3.0
+        btnOptionThree.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        btnOptionThree.layer.cornerRadius = 20.0
+        
+        btnOptionFour.layer.borderWidth = 3.0
+        btnOptionFour.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        btnOptionFour.layer.cornerRadius = 20.0
+        
+        retButton.layer.borderWidth = 3.0
+        retButton.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        retButton.layer.cornerRadius = 20.0
+        
+        retButton.isHidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,16 +69,45 @@ class ViewController: UIViewController {
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
         //conditional that toggles based on if the question is hidden
+    }
+    
+    @IBAction func didTapOptionOne(_ sender: Any){
+        btnOptionOne.isHidden = true
+    }
+    
+    @IBAction func didTapOptionTwo(_ sender: Any){
+        btnOptionOne.isHidden = true
+        btnOptionThree.isHidden = true
+        btnOptionFour.isHidden = true
+        
+        FrontLabel.isHidden = true;
+        view.backgroundColor = UIColor.white
+        card.backgroundColor = UIColor.cyan
+        BackLabel.backgroundColor = UIColor.cyan
+        retButton.isHidden = false
+    }
+    
+    
+    @IBAction func didTapOptionThree(_ sender: Any){
+         btnOptionThree.isHidden = true
+    }
+    
+    @IBAction func didTapOptionFour(_ sender: Any){
+         btnOptionFour.isHidden = true
+    }
+    
+    
+    @IBAction func didTapReturn(_ sender: Any){
         if (FrontLabel.isHidden){
             FrontLabel.isHidden = false;
             view.backgroundColor = backgroundColor;
             card.backgroundColor = backgroundColor
-        }
-        else{
-            FrontLabel.isHidden = true;
-            view.backgroundColor = UIColor.white
-            card.backgroundColor = UIColor.cyan
-            BackLabel.backgroundColor = UIColor.cyan
+            btnOptionOne.isHidden = false
+            btnOptionTwo.isHidden = false
+            btnOptionThree.isHidden = false
+            btnOptionFour.isHidden = false
+            card.backgroundColor = backgroundColor
+            retButton.isHidden = true
         }
     }
 }
