@@ -68,7 +68,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        //conditional that toggles based on if the question is hidden
+        //do nothing
     }
     
     @IBAction func didTapOptionOne(_ sender: Any){
