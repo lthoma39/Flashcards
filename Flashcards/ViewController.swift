@@ -5,6 +5,7 @@
 //  Created by Latrell Thomas on 10/13/18.
 //  Copyright © 2018 Latrell Thomas. All rights reserved.
 //
+//2/3 optionals done
 
 import UIKit
 
