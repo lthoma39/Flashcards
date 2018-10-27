@@ -21,6 +21,8 @@ Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note c
 - [ ] User can edit existing flashcard
 - [ ] User can add multiple choice answers in the creation screen
 
+## Lab 1
+
 ### App Description
 Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note cards? Today is your lucky day! Now featuring the flashcards app. Currently in beta but will help you prepare for tests.
 
