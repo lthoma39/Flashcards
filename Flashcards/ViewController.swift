@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var FrontLabel: UILabel!
     @IBOutlet weak var BackLabel: UILabel!
+    @IBOutlet weak var card: UIView!
+    
     
     var backgroundColor: UIColor!
     
@@ -19,6 +21,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         backgroundColor = view.backgroundColor //for getting the default color
         // Do any additional setup after loading the view, typically from a nib.
+        
+        card.layer.cornerRadius = 20.0
+        card.layer.shadowRadius = 15.0
+        card.layer.shadowOpacity = 0.2
+        
+        FrontLabel.clipsToBounds = true
+        BackLabel.clipsToBounds = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,10 +42,13 @@ class ViewController: UIViewController {
         if (FrontLabel.isHidden){
             FrontLabel.isHidden = false;
             view.backgroundColor = backgroundColor;
+            card.backgroundColor = backgroundColor
         }
         else{
             FrontLabel.isHidden = true;
-            view.backgroundColor = UIColor.green;
+            view.backgroundColor = UIColor.white
+            card.backgroundColor = UIColor.cyan
+            BackLabel.backgroundColor = UIColor.cyan
         }
     }
 }
