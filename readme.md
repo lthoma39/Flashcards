@@ -5,7 +5,7 @@ Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note c
 
 ### App Walk-though
 
-<img src=http://g.recordit.co/YtZkEMoZ4x.gif width=200><br>
+<img src=http://g.recordit.co/UQq6cpgVtB.gif width=200><br>
 
 ## Required
 - [x] Create New Project in Xcode
