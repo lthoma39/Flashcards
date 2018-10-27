@@ -71,6 +71,11 @@ class ViewController: UIViewController {
         //do nothing
     }
     
+    func updateFlashcard(question: String, answer: String){
+        FrontLabel.text = question
+        BackLabel.text = answer
+    }
+    
     @IBAction func didTapOptionOne(_ sender: Any){
         btnOptionOne.isHidden = true
     }
@@ -109,6 +114,17 @@ class ViewController: UIViewController {
             card.backgroundColor = backgroundColor
             retButton.isHidden = true
         }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+        let navigationController = segue.destination as! UINavigationController
+        
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self
+        
     }
 }
 
