@@ -1,5 +1,28 @@
 ## Flashcards
 
+## Lab 2
+
+### App Description
+Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note cards? Today is your lucky day! Now featuring the flashcards app. Now feauturing the ability to create your own flash card.
+
+### App Walk-though
+
+<img src=http://g.recordit.co/YPLfp1FpuD.gif width=200><br>
+
+
+
+## Required
+- [x] User can open the creation screen
+- [x] User can cancel out of the creation screen
+- [x] User can enter a new question and answer in the creation screen to then show it on the flashcard
+- [x] Push code to GitHub
+## Optional
+- [ ] User gets an error if they try to create a new flashcard with no question or answer
+- [ ] User can edit existing flashcard
+- [ ] User can add multiple choice answers in the creation screen
+
+## Lab 1
+
 ### App Description
 Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note cards? Today is your lucky day! Now featuring the flashcards app. Currently in beta but will help you prepare for tests.
 
