@@ -7,7 +7,7 @@ Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note c
 
 ### App Walk-though
 
-<img src=http://g.recordit.co/YPLfp1FpuD.gif width=200><br>
+<img src=http://g.recordit.co/LeTyLUiwhy.gif width=200><br>
 
 
 
