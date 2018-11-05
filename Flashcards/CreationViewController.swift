@@ -42,6 +42,7 @@ class CreationViewController: UIViewController {
         let questionText = questionTextField.text
         let answerText = answerTextField.text
         
+        //for passing into the update flashcard method 
         let opt1 = answerOption1.text
         let opt2 = answerOption2.text
         let opt3 = answerOption3.text
