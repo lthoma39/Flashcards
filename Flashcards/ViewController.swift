@@ -125,6 +125,11 @@ class ViewController: UIViewController {
         
         creationController.flashcardsController = self
         
+        if (segue.identifier == "EditSegue"){
+            creationController.initialQuestion = FrontLabel.text
+            creationController.initialAnswer = BackLabel.text
+        }
+        
     }
 }
 

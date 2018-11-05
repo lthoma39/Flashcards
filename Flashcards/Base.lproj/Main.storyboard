@@ -38,6 +38,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faN-Rx-2kW">
+                                        <rect key="frame" x="279" y="181" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="✏️"/>
+                                        <connections>
+                                            <segue destination="zRV-QW-Qzj" kind="show" identifier="EditSegue" id="QCZ-Qs-IlT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -183,4 +191,7 @@
             <point key="canvasLocation" x="864.79999999999995" y="135.38230884557723"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QCZ-Qs-IlT"/>
+    </inferredMetricsTieBreakers>
 </document>
