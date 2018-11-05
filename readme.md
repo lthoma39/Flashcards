@@ -18,7 +18,7 @@ Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note c
 - [x] Push code to GitHub
 ## Optional
 - [x] User gets an error if they try to create a new flashcard with no question or answer
-- [ ] User can edit existing flashcard
+- [x] User can edit existing flashcard
 - [ ] User can add multiple choice answers in the creation screen
 
 ## Lab 1
