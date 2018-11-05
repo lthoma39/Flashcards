@@ -129,7 +129,6 @@ class ViewController: UIViewController {
             creationController.initialQuestion = FrontLabel.text
             creationController.initialAnswer = BackLabel.text
         }
-        
     }
 }
 
