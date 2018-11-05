@@ -76,10 +76,12 @@ class ViewController: UIViewController {
         FrontLabel.text = question
         BackLabel.text = answer
         
+        //for changing the multiple choice answers 
         btnOptionOne.setTitle(option1, for: .normal)
         btnOptionTwo.setTitle(option2, for: .normal)
         btnOptionThree.setTitle(option3, for: .normal)
         btnOptionFour.setTitle(option4, for: .normal)
+        
     }
     
     @IBAction func didTapOptionOne(_ sender: Any){
