@@ -15,6 +15,12 @@ class CreationViewController: UIViewController {
     @IBOutlet weak var questionTextField: UITextField!
     @IBOutlet weak var answerTextField: UITextField!
     
+    @IBOutlet weak var answerOption1: UITextField!
+    @IBOutlet weak var answerOption2: UITextField!
+    @IBOutlet weak var answerOption3: UITextField!
+    @IBOutlet weak var answerOption4: UITextField!
+    
+    
     var initialQuestion: String?
     var initialAnswer: String?
     
@@ -36,6 +42,11 @@ class CreationViewController: UIViewController {
         let questionText = questionTextField.text
         let answerText = answerTextField.text
         
+        let opt1 = answerOption1.text
+        let opt2 = answerOption2.text
+        let opt3 = answerOption3.text
+        let opt4 = answerOption4.text
+        
         if (questionText == nil || answerText == nil || questionText!.isEmpty || questionText!.isEmpty){
             let alert = UIAlertController(title: "Missing text", message: "Make sure to provide text for both Question and Answer", preferredStyle: .alert)
             present(alert, animated: true)
@@ -44,7 +55,7 @@ class CreationViewController: UIViewController {
             alert.addAction(okAction)
         }
         else{
-            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
+            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, option1: opt1!, option2: opt2!, option3: opt3!, option4: opt4!)
             
             dismiss(animated: true)
         }

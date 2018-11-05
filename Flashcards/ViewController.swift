@@ -71,9 +71,15 @@ class ViewController: UIViewController {
         //do nothing
     }
     
-    func updateFlashcard(question: String, answer: String){
+    func updateFlashcard(question: String, answer: String, option1: String?, option2: String?, option3: String?, option4: String?){
+        
         FrontLabel.text = question
         BackLabel.text = answer
+        
+        btnOptionOne.setTitle(option1, for: .normal)
+        btnOptionTwo.setTitle(option2, for: .normal)
+        btnOptionThree.setTitle(option3, for: .normal)
+        btnOptionFour.setTitle(option4, for: .normal)
     }
     
     @IBAction func didTapOptionOne(_ sender: Any){
