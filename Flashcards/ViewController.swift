@@ -76,10 +76,18 @@ class ViewController: UIViewController {
         FrontLabel.text = question
         BackLabel.text = answer
         
-        btnOptionOne.setTitle(option1, for: .normal)
-        btnOptionTwo.setTitle(option2, for: .normal)
-        btnOptionThree.setTitle(option3, for: .normal)
-        btnOptionFour.setTitle(option4, for: .normal)
+        if (!(option1?.isEmpty)!){
+           btnOptionOne.setTitle(option1, for: .normal)
+        }
+        if (!(option2?.isEmpty)!){
+            btnOptionTwo.setTitle(option2, for: .normal)
+        }
+        if (!(option3?.isEmpty)!){
+            btnOptionThree.setTitle(option3, for: .normal)
+        }
+        if (!(option4?.isEmpty)!){
+            btnOptionFour.setTitle(option4, for: .normal)
+        }
         
     }
     
