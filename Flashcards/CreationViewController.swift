@@ -24,6 +24,10 @@ class CreationViewController: UIViewController {
     var initialQuestion: String?
     var initialAnswer: String?
     
+    var initialQ1: String?
+    var initialQ2: String?
+    var initialQ3: String?
+    var initialQ4: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
