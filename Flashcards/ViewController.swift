@@ -71,6 +71,14 @@ class ViewController: UIViewController {
         retButton.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         retButton.layer.cornerRadius = 20.0
         
+        prevButton.layer.borderWidth = 3.0
+        prevButton.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        prevButton.layer.cornerRadius = 20.0
+        
+        nextButton.layer.borderWidth = 3.0
+        nextButton.layer.borderColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        nextButton.layer.cornerRadius = 20.0
+        
         retButton.isHidden = true
         
         readSavedFlashcards()
