@@ -3,7 +3,7 @@
 ## Lab 3
 
 ### App Description
-Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note cards? Today is your lucky day! Now featuring the flashcards app. Now feauturing the ability to create have multiple flashcards and
+Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note cards? Today is your lucky day! Now featuring the flashcards app. Now feauturing the ability to create multiple flashcards and delete them
 
 ### App Walk-though
 
