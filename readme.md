@@ -1,5 +1,23 @@
 ## Flashcards
 
+## Lab 3
+
+### App Description
+Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note cards? Today is your lucky day! Now featuring the flashcards app. Now feauturing the ability to create have multiple flashcards and
+
+### App Walk-though
+
+<img src=http://g.recordit.co/WHTbrgiS4D.gif width=200><br>
+
+## Required
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
+- [x] Push code to GitHub
+## Optional
+- [ ] User can delete a flashcard
+- [ ] User can edit existing flashcard
+- [x] User can store multiple choice questions
+
 ## Lab 2
 
 ### App Description
