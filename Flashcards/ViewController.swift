@@ -84,7 +84,7 @@ class ViewController: UIViewController {
         readSavedFlashcards()
         
         if (flashcards.count == 0){
-             updateFlashcard(question: "1 + 1", answer: "2", option1: "4", option2: "2", option3: "3", option4: "1")
+            updateFlashcard(question: "1 + 1", answer: "2", option1: "4", option2: "2", option3: "3", option4: "1", isExisting: false)
         }
         else{
             updateLabels()
@@ -105,6 +105,34 @@ class ViewController: UIViewController {
         //do nothing
     }
     
+    @IBAction func didTapOnDelete(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Delete flashcard", message: "Are you sure you want to delete it?", preferredStyle: .actionSheet)
+        
+        present(alert, animated: true)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { action in
+            self.deleteCurrentFlashcard()
+        }
+        alert.addAction(deleteAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(cancelAction)
+        
+    }
+    
+    func deleteCurrentFlashcard(){
+        flashcards.remove(at: currentIndex)
+        
+        if (currentIndex > flashcards.count - 1){
+            currentIndex = flashcards.count - 1
+        }
+        
+        updatePrevNextButtons()
+        updateLabels()
+        saveAllFlashcardsToDisk()
+    }
+    
     func updatePrevNextButtons(){
         
         if (currentIndex == flashcards.count - 1){
@@ -122,11 +150,17 @@ class ViewController: UIViewController {
         }
     }
     
-    func updateFlashcard(question: String, answer: String, option1: String?, option2: String?, option3: String?, option4: String?){
+    func updateFlashcard(question: String, answer: String, option1: String?, option2: String?, option3: String?, option4: String?, isExisting: Bool){
         
         let flashcard = Flashcard(question: question, answer: answer, option1: option1!, option2: option2!, option3: option3!, option4: option4!)
         
-        flashcards.append(flashcard)
+        if (isExisting){
+            flashcards[currentIndex] = flashcard
+        }
+        else{
+            flashcards.append(flashcard)
+        }
+        
         print("Added a new flashcard")
         print("We now have \(flashcards.count) flashcards")
         
