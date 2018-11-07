@@ -7,7 +7,7 @@ Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note c
 
 ### App Walk-though
 
-<img src=http://recordit.co/WHTbrgiS4D width=200><br>
+<img src=http://g.recordit.co/WHTbrgiS4D.gif width=200><br>
 
 ## Required
 - [x] User can browse through multiple flashcards
