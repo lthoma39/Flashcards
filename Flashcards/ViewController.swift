@@ -90,9 +90,6 @@ class ViewController: UIViewController {
             updateLabels()
             updatePrevNextButtons()
         }
-        
-       
-        
     }
 
     override func didReceiveMemoryWarning() {
