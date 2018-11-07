@@ -158,10 +158,15 @@ class ViewController: UIViewController {
             flashcards.append(flashcard)
         }
         
-        print("Added a new flashcard")
         print("We now have \(flashcards.count) flashcards")
         
-        currentIndex = flashcards.count - 1
+        if(isExisting){
+            //do nothing
+        }
+        else{
+            currentIndex = flashcards.count - 1
+        }
+        
         print("Our current index is \(currentIndex) ")
         
         updatePrevNextButtons()
