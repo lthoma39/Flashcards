@@ -39,6 +39,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    var correctAnswerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundColor = view.backgroundColor //for getting the default color
@@ -140,9 +142,32 @@ class ViewController: UIViewController {
     }
     
     func flipFlashcard(){
-        btnOptionOne.isHidden = true
-        btnOptionThree.isHidden = true
-        btnOptionFour.isHidden = true
+        
+        if (correctAnswerButton == btnOptionOne){
+            btnOptionOne.isHidden = false
+        }
+        else{
+            btnOptionOne.isHidden = true
+        }
+        
+        if (correctAnswerButton == btnOptionTwo){
+            btnOptionTwo.isHidden = false
+        }
+        else{
+            btnOptionTwo.isHidden = true
+        }
+        if (correctAnswerButton == btnOptionThree){
+            btnOptionThree.isHidden = false
+        }
+        else{
+            btnOptionThree.isHidden = true
+        }
+        if (correctAnswerButton == btnOptionFour){
+            btnOptionFour.isHidden = false
+        }
+        else{
+            btnOptionFour.isHidden = true
+        }
         
         FrontLabel.isHidden = true;
         view.backgroundColor = UIColor.white
@@ -228,20 +253,53 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapOptionOne(_ sender: Any){
-        btnOptionOne.isHidden = true
+        
+        if (btnOptionOne == correctAnswerButton){
+            flipFlashcard()
+            
+        }
+        else{
+            FrontLabel.isHidden = false
+            btnOptionOne.isHidden = true
+        }
+        
     }
     
     @IBAction func didTapOptionTwo(_ sender: Any){
-        flipFlashcard();
+        
+        if (btnOptionTwo == correctAnswerButton){
+            flipFlashcard()
+            
+        }
+        else{
+            FrontLabel.isHidden = false
+            btnOptionTwo.isHidden = true
+        }
     }
     
     
     @IBAction func didTapOptionThree(_ sender: Any){
-         btnOptionThree.isHidden = true
+        
+        if (btnOptionThree == correctAnswerButton){
+            flipFlashcard()
+            
+        }
+        else{
+            FrontLabel.isHidden = false
+            btnOptionThree.isHidden = true
+        }
     }
     
     @IBAction func didTapOptionFour(_ sender: Any){
-         btnOptionFour.isHidden = true
+        
+        if (btnOptionFour == correctAnswerButton){
+            flipFlashcard()
+          
+        }
+        else{
+            FrontLabel.isHidden = false
+            btnOptionFour.isHidden = true
+        }
     }
     
     
@@ -265,6 +323,7 @@ class ViewController: UIViewController {
         updatePrevNextButtons()
         updateLabels()
         didTapBack()
+        resetButtons()
         animateCardOut2()
     }
     
@@ -283,11 +342,19 @@ class ViewController: UIViewController {
         }
     }
     
+    func resetButtons(){
+        btnOptionOne.isHidden = false
+        btnOptionTwo.isHidden = false
+        btnOptionThree.isHidden = false
+        btnOptionFour.isHidden = false
+    }
+    
     @IBAction func didTapNext(_ sender: Any){
         
         currentIndex += 1
         updatePrevNextButtons()
         didTapBack()
+        resetButtons()
         animateCardOut()
     }
     
@@ -310,20 +377,27 @@ class ViewController: UIViewController {
         let currentFlashcard = flashcards[currentIndex]
         FrontLabel.text = currentFlashcard.question
         BackLabel.text = currentFlashcard.answer
-        if (!(currentFlashcard.option1.isEmpty)){
-            btnOptionOne.setTitle(currentFlashcard.option1, for: .normal)
-        }
-        if (!(currentFlashcard.option2.isEmpty)){
-            btnOptionTwo.setTitle(currentFlashcard.option2, for: .normal)
-        }
-        if (!(currentFlashcard.option3.isEmpty)){
-            btnOptionThree.setTitle(currentFlashcard.option3, for: .normal)
-        }
-        if (!(currentFlashcard.option4.isEmpty)){
-            btnOptionFour.setTitle(currentFlashcard.option4, for: .normal)
+        
+       
+        /*btnOptionOne.setTitle(currentFlashcard.option1, for: .normal)
+        btnOptionTwo.setTitle(currentFlashcard.option2, for: .normal)
+        btnOptionThree.setTitle(currentFlashcard.option3, for: .normal)
+        btnOptionFour.setTitle(currentFlashcard.option4, for: .normal)*/
+        
+        let buttons = [btnOptionOne, btnOptionTwo, btnOptionThree, btnOptionFour].shuffled()
+        
+        let answers = [currentFlashcard.option1, currentFlashcard.option2, currentFlashcard.option3, currentFlashcard.option4].shuffled()
+        
+        for (button, answer) in zip(buttons, answers){
+            button?.setTitle(answer, for: .normal)
+            
+            if (answer == currentFlashcard.answer){
+                correctAnswerButton = button
+            }
         }
         
         saveAllFlashcardsToDisk()
+        
     }
     
     func readSavedFlashcards(){
