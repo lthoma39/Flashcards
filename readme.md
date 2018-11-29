@@ -6,7 +6,7 @@
 Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note cards? Today is your lucky day! Now featuring the flashcards app. Now feauturing the ability flashcards animations.
 
 ### App Walk-though
-<img src=http://g.recordit.co/zBRaSaNrhd.gif width=200><br>
+<img src=http://g.recordit.co/ihvGLkf4Y9.gif width=200><br>
 
 ## Required
 - [x] User should see the app icon 
@@ -16,9 +16,9 @@ Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note c
 - [x] User should see a slide animation when going to the previous flashcard
 - [x] Push code to GitHub
 ## Optional
-- [ ] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
-- [ ] User should see all views properly layout when using the app on a phone of different sizes
-- [ ] Correct answer in multiple choice should be random
+- [x] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
+- [x] User should see all views properly layout when using the app on a phone of different sizes
+- [x] Correct answer in multiple choice should be random
 
 ## Lab 3
 
