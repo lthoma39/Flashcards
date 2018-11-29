@@ -102,6 +102,23 @@ class ViewController: UIViewController {
         //do nothing
     }
     
+    func flipFlashcard(){
+        btnOptionOne.isHidden = true
+        btnOptionThree.isHidden = true
+        btnOptionFour.isHidden = true
+        
+        FrontLabel.isHidden = true;
+        view.backgroundColor = UIColor.white
+        card.backgroundColor = UIColor.cyan
+        BackLabel.backgroundColor = UIColor.cyan
+        retButton.isHidden = false
+        prevButton.isHidden = true
+        
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            self.FrontLabel.isHidden = true;
+        })
+    }
+    
     @IBAction func didTapOnDelete(_ sender: Any) {
         
         let alert = UIAlertController(title: "Delete flashcard", message: "Are you sure you want to delete it?", preferredStyle: .actionSheet)
@@ -178,16 +195,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapOptionTwo(_ sender: Any){
-        btnOptionOne.isHidden = true
-        btnOptionThree.isHidden = true
-        btnOptionFour.isHidden = true
-        
-        FrontLabel.isHidden = true;
-        view.backgroundColor = UIColor.white
-        card.backgroundColor = UIColor.cyan
-        BackLabel.backgroundColor = UIColor.cyan
-        retButton.isHidden = false
-        prevButton.isHidden = true
+        flipFlashcard();
     }
     
     
@@ -219,14 +227,31 @@ class ViewController: UIViewController {
         currentIndex -= 1
         updatePrevNextButtons()
         updateLabels()
-        
+        didTapBack()
+        animateCardOut2()
+    }
+    
+    func didTapBack(){
+        if (FrontLabel.isHidden){
+            FrontLabel.isHidden = false;
+            view.backgroundColor = backgroundColor;
+            card.backgroundColor = backgroundColor
+            btnOptionOne.isHidden = false
+            btnOptionTwo.isHidden = false
+            btnOptionThree.isHidden = false
+            btnOptionFour.isHidden = false
+            card.backgroundColor = backgroundColor
+            retButton.isHidden = true
+            prevButton.isHidden = false
+        }
     }
     
     @IBAction func didTapNext(_ sender: Any){
         
         currentIndex += 1
         updatePrevNextButtons()
-        updateLabels()
+        didTapBack()
+        animateCardOut()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
@@ -284,6 +309,46 @@ class ViewController: UIViewController {
         
         UserDefaults.standard.set(dictionaryArray, forKey: "flashcards")
         
+    }
+    
+    func animateCardIn(){
+        
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3){
+            self.card.transform = CGAffineTransform.identity
+        }
+    }
+    func animateCardOut(){
+       
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        }, completion:{ finished in
+            self.updateLabels()
+            self.animateCardIn()
+            
+        })
+        
+        
+    }
+    
+    func animateCardOut2(){
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        }, completion:{ finished in
+            self.updateLabels()
+            self.animateCardIn2()
+            
+        })
+    }
+    
+    func animateCardIn2(){
+        card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3){
+            self.card.transform = CGAffineTransform.identity
+        }
     }
 }
 
