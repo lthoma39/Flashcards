@@ -91,6 +91,43 @@ class ViewController: UIViewController {
             updatePrevNextButtons()
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        card.alpha = 0.0
+        card.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        
+        btnOptionOne.alpha = 0.0
+        btnOptionOne.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        
+        btnOptionTwo.alpha = 0.0
+        btnOptionTwo.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        
+        btnOptionThree.alpha = 0.0
+        btnOptionThree.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        
+        btnOptionFour.alpha = 0.0
+        btnOptionFour.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        
+        UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            
+            self.card.alpha = 1.0
+            self.card.transform = CGAffineTransform.identity
+            
+            self.btnOptionOne.alpha = 1.0
+            self.btnOptionOne.transform = CGAffineTransform.identity
+            
+            self.btnOptionTwo.alpha = 1.0
+            self.btnOptionTwo.transform = CGAffineTransform.identity
+            
+            self.btnOptionThree.alpha = 1.0
+            self.btnOptionThree.transform = CGAffineTransform.identity
+            
+            self.btnOptionFour.alpha = 1.0
+            self.btnOptionFour.transform = CGAffineTransform.identity
+        })
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
