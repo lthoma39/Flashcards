@@ -340,7 +340,7 @@ class ViewController: UIViewController {
             self.updateLabels()
             self.animateCardIn2()
             
-        })
+        }) //hello world 
     }
     
     func animateCardIn2(){
