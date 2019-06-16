@@ -3,7 +3,7 @@
 ## Lab 4
 
 ### App Description
-Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note cards? Today is your lucky day! Now featuring the flashcards app. Now feauturing the ability flashcards animations.
+Ever wanted to prepare for a quiz/exam, but didn't want to spend money on note cards? Today is your lucky day! Now featuring the flashcards app. Now featuring flashcards animations.
 
 ### App Walk-though
 <img src=http://g.recordit.co/ihvGLkf4Y9.gif width=200><br>
